@@ -26,7 +26,7 @@ const triggerAlert = (id) => {
 
     monitor.status = 'down';
     monitor.timer = null;
-    
+
     // Simulate alert
     console.log(JSON.stringify({
         ALERT: `Device ${id} is down!`,
@@ -114,6 +114,7 @@ app.post('/monitors/:id/pause', (req, res) => {
     res.status(200).json({ message: `Monitor ${id} is paused.` });
 });
 
+
 // Developer's Choice: Get all monitors
 app.get('/monitors', (req, res) => {
     const list = Array.from(monitors.values()).map(m => ({
@@ -123,7 +124,7 @@ app.get('/monitors', (req, res) => {
         status: m.status,
         lastHeartbeat: m.lastHeartbeat
     }));
-    
+
     res.status(200).json(list);
 });
 
