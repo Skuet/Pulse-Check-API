@@ -1,0 +1,12 @@
+{
+  "name": "pulse-check-api",
+  "version": "1.0.0",
+  "description": "CritMon Dead Man's Switch API",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

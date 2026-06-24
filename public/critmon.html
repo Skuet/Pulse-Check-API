@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CritMon - Global Observatory</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="critmon.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="logo">
+                <div class="pulse-icon"></div>
+                <h1>CritMon <span class="subtitle">Observatory</span></h1>
+            </div>
+        </header>
+
+        <main>
+            <section class="controls-panel glass-panel">
+                <h2>Register New Monitor</h2>
+                <form id="registerForm">
+                    <div class="input-group">
+                        <label for="deviceId">Device ID</label>
+                        <input type="text" id="deviceId" placeholder="e.g. weather-station-01" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="timeout">Timeout (Seconds)</label>
+                        <input type="number" id="timeout" value="60" min="5" required>
+                    </div>
+                    <button type="submit" class="btn-primary">Start Monitoring</button>
+                </form>
+            </section>
+
+            <section class="monitors-panel">
+                <div class="panel-header">
+                    <h2>Active Devices</h2>
+                    <div class="stats">
+                        <span id="activeCount" class="stat active">0 Active</span>
+                        <span id="downCount" class="stat down">0 Down</span>
+                    </div>
+                </div>
+                <div id="monitorsGrid" class="monitors-grid">
+                    <!-- Monitor Cards go here -->
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
