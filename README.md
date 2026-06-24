@@ -1,7 +1,3 @@
-# CritMon Dead Man's Switch API
-
-CritMon provides a stateful monitoring system for remote devices with poor connectivity (such as solar farms and unmanned weather stations). This API acts as a Dead Man's Switch, automatically triggering an alert if a device fails to send its periodic heartbeat.
-
 ## Architecture
 
 The system uses an in-memory Node.js state store to track registered devices and their countdown timers.
@@ -44,7 +40,7 @@ sequenceDiagram
    ```bash
    node server.js
    ```
-   The server will run on port 3000 by default.
+
 
 ## API Documentation
 
@@ -112,6 +108,6 @@ A robust monitoring system should not be a "black box" that only speaks when thi
   }
 ]
 ```
-
 There is also an endpoint to get a specific monitor:
-**Request:** `GET /monitors/{id}`
+**Request:** `GET /monitors/{id}` ...
+
